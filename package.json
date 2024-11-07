@@ -2,7 +2,7 @@
   "name": "time-bar",
   "displayName": "TimeBar",
   "description": "在状态栏显示当前时间，完美解决全屏编码时看不到时间的问题",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "AT-9420",
   "author": {
     "name": "AT-9420"
