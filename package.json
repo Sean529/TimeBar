@@ -3,12 +3,12 @@
   "displayName": "TimeBar",
   "description": "在状态栏显示当前时间，完美解决全屏编码时看不到时间的问题",
   "version": "0.0.1",
-  "publisher": "at",
+  "publisher": "AT-9420",
   "author": {
-    "name": "at"
+    "name": "AT-9420"
   },
   "engines": {
-    "vscode": "^1.95.0"
+    "vscode": "^1.65.0"
   },
   "categories": [
     "Other"
@@ -34,21 +34,23 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0",
     "@types/mocha": "^10.0.9",
     "@types/node": "20.x",
+    "@types/vscode": "^1.44.0",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.7.0",
-    "eslint": "^9.13.0",
-    "typescript": "^5.6.3",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "eslint": "^9.13.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   },
   "keywords": [
     "time",
@@ -57,7 +59,6 @@
     "statusbar",
     "timestamp"
   ],
-  "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#C80000",
     "theme": "dark"
