@@ -1,66 +1,68 @@
 {
-  "name": "time-bar",
-  "displayName": "TimeBar",
-  "description": "在状态栏显示当前时间，完美解决全屏编码时看不到时间的问题",
-  "version": "0.0.2",
-  "publisher": "AT-9420",
-  "author": {
-    "name": "AT-9420"
-  },
-  "engines": {
-    "vscode": "^1.65.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "timeBar.updateTime",
-        "title": "Update DateTime"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "pnpm run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test",
-    "publish": "pnpm vsce publish --no-dependencies"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.9",
-    "@types/node": "20.x",
-    "@types/vscode": "^1.44.0",
-    "@typescript-eslint/eslint-plugin": "^8.10.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1",
-    "copy-webpack-plugin": "^12.0.2",
-    "eslint": "^9.13.0",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.6.3",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
-  },
-  "keywords": [
-    "time",
-    "clock",
-    "datetime",
-    "statusbar",
-    "timestamp"
-  ],
-  "galleryBanner": {
-    "color": "#C80000",
-    "theme": "dark"
-  }
+    "name": "time-bar",
+    "displayName": "TimeBar",
+    "description": "在状态栏显示当前时间，完美解决全屏编码时看不到时间的问题",
+    "version": "0.0.2",
+    "publisher": "AT-9420",
+    "author": {
+        "name": "AT-9420"
+    },
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "timeBar.updateTime",
+                "title": "Update DateTime"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "pnpm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+        "lint": "eslint src",
+        "test": "vscode-test",
+        "publish": "pnpm vsce publish --no-dependencies",
+        "publish:ovsx": "npx ovsx publish"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.9",
+        "@types/node": "20.x",
+        "@types/vscode": "^1.44.0",
+        "@typescript-eslint/eslint-plugin": "^8.10.0",
+        "@typescript-eslint/parser": "^8.7.0",
+        "@vscode/test-cli": "^0.0.10",
+        "@vscode/test-electron": "^2.4.1",
+        "copy-webpack-plugin": "^12.0.2",
+        "eslint": "^9.13.0",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.6.3",
+        "webpack": "^5.95.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "keywords": [
+        "time",
+        "clock",
+        "datetime",
+        "statusbar",
+        "timestamp"
+    ],
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
+    "license": "MIT"
 }
